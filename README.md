@@ -217,37 +217,6 @@ No build tool is required. Plain ES5-ish JS for maximum WP compatibility.
 -   **Prod builds**: set `CC_DZ_DEBUG` to `false` (or remove) so versions are static and cache-friendly.
 -   **Test builds**: set `CC_DZ_DEBUG` to `true` to bypass caches using `filemtime()`.
 
-**Tagging (example)**
-
-```bash
-git tag -a v1.3.0 -m "DZ Lite 1.3.0: stable resets, multiple re-add cycle"
-git push --tags
-```
-
----
-
-## Repo commands
-
-```bash
-# Clone
-git clone git@github.com:CodeCornTech/mu-cc-dz-lite.git
-cd mu-cc-dz-lite
-
-# Create MU layout locally (if you’re not cloning straight into wp-content)
-mkdir -p wp-content/mu-plugins/codecorn/dz-lite/assets/{js,css}
-# (copy files accordingly)
-
-# Quick sanity checks
-php -l mu-plugins/mu-cc-dz-loader.php
-# (no build step required)
-
-# Tag a release
-git add .
-git commit -m "chore(release): bump to 1.3.0"
-git tag -a v1.3.0 -m "release: 1.3.0"
-git push && git push --tags
-```
-
 ---
 
 ## Support & security
