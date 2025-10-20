@@ -1,48 +1,69 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# ---------------------------------------------
+# 🧩 CodeCorn™ MU Plugin Git Ignore
+# ---------------------------------------------
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# OS / editor junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# Configuration
-wp-config.php
+# IDE / project files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
 
-# Example themes
-/wp-content/themes/twenty*/
+# Node / npm (if used for builds)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Example plugin
-/wp-content/plugins/hello.php
+# Composer vendor (not used here, we keep our vendor folder)
+vendor/
+!codecorn/vendors/
 
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# Build / cache
 *.log
+*.tmp
+*.bak
+*.swp
+*.lock
+*.map
 
-# htaccess
-/.htaccess
+# WordPress environment artifacts
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/ai1wm-backups/
+wp-content/debug.log
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# Local env / container configs
+.env
+.env.*
+docker-compose*.yml
+.Dockerfile
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# Dist / zip exports
+*.zip
+*.tar.gz
+
+# Temporary dev notes
+TODO*
+*.old
+*.orig
+
+# Keep MU plugin vendor Select2 explicitly
+!codecorn/vendors/select2/
+!codecorn/vendors/select2/**
+
+# ---------------------------------------------
+# ✅ End of file
+# ---------------------------------------------
+_STASH/**
+.DS_Store.DS_Store
+*.log
+node_modules/
+
