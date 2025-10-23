@@ -1,0 +1,27 @@
+/* Anti-flicker: nasconde solo la visibilità, non l’ingombro */
+#form-field-allega_media,.elementor-upload-field,html.ccdz-booting .elementor-field-type-upload{ visibility:hidden !important; }
+
+/* Transition off durante il boot */
+html.ccdz-booting .cc-dz, html.ccdz-booting .cc-dz *{ transition:none !important; }
+
+/* Fade-in quando pronti */
+html.ccdz-ready .cc-dz{ opacity:1; transform:none; transition:opacity .12s ease, transform .12s ease; }
+.cc-dz{ opacity:0; transform:translateY(2px); }
+
+/* Skin */
+.cc-dz{ position:relative; border:1.5px dashed rgba(0,0,0,.2); border-radius:10px; padding:14px; background:#555252; cursor:pointer; }
+.cc-dz.is-dragover{ border-color:rgba(0,0,0,.45); background:rgba(0,0,0,.04); }
+.cc-dz-hint{ font-size:12px; opacity:.75; margin-top:6px }
+.cc-dz-list{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
+.cc-dz-item{ position:relative; border:1px solid rgba(0,0,0,.08); border-radius:8px; padding:8px 8px 8px 44px; min-width:220px; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.04) }
+.cc-dz-thumb{ position:absolute; left:8px; top:8px; width:28px; height:28px; border-radius:4px; object-fit:cover; background:#f2f2f2 }
+.cc-dz-name{ font-size:13px; color:rgba(0,0,0,.8); font-weight:600; line-height:1.2 }
+.cc-dz-meta{ font-size:11px; color:rgba(0,0,0,.8); opacity:.7 }
+.cc-dz-remove{ position:absolute; right:8px; top:8px; border:none; background:#f6f6f6; border-radius:6px; padding:3px 8px !important; font-size:11px; cursor:pointer; z-index:2 }
+.cc-dz-err{ color:#b00020; font-size:12px; margin-top:6px }
+
+/* Nasconde l’input nativo mantenendo l’accessibilità */
+.cc-hidden{ position:absolute !important; left:-99999px !important; width:1px; height:1px; overflow:hidden; }
+
+/* Debug badge */
+.cc-dz-debug{ position:absolute; top:8px; right:8px; font-size:10px; line-height:1; background:#111; color:#fff; padding:4px 6px; border-radius:6px; opacity:.85; pointer-events:none; }
