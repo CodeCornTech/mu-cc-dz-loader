@@ -67,3 +67,5 @@ _STASH/**
 *.log
 node_modules/
 
+_STASHED/codecorn/dz-lite/assets/js/init.js
+/_STASHED

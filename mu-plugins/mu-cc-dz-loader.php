@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  CodeCorn™ DZ Lite (MU)
  * Description:  Dropzone-like UI per Elementor Form (compatibilità totale con input nativo + reset post-submit). Asset esterni versionati + validazione server-side togglabile.
- * Version:      1.3.1
+ * Version:      1.3.12
  * Author:       CodeCorn™ Technology
  * License:      MIT
  */
@@ -13,13 +13,13 @@ if (!defined('ABSPATH'))
 
 final class CC_DZ
 {
-    public const VER = '1.3.1';
+    public const string VER = '1.3.12';
 
-    private const BASE_DIR = 'mu-plugins/codecorn/dz-lite';
-    private const H_CSS = 'cc-dz-css';
-    private const H_FIRST = 'cc-dz-first';
-    private const H_CORE = 'cc-dz-core';
-    private const H_INIT = 'cc-dz-init';
+    private const string BASE_DIR = 'mu-plugins/codecorn/dz-lite';
+    private const string H_CSS = 'cc-dz-css';
+    private const string H_FIRST = 'cc-dz-first';
+    private const string H_CORE = 'cc-dz-core';
+    private const string H_INIT = 'cc-dz-init';
 
     public static function boot(): void
     {

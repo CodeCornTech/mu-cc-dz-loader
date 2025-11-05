@@ -1,5 +1,5 @@
 // @ts-nocheck
-// init.js 1.3.12
+// init.js
 (function($, w){
   'use strict';
   w.CC_DZ = (w.CC_DZ && typeof w.CC_DZ === 'object') ? w.CC_DZ : {};

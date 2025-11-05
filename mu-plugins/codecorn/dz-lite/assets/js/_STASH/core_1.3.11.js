@@ -1,5 +1,5 @@
 // @ts-nocheck
-// core.js 1.3.12
+// core.js
 (function ($, window) {
     'use strict';
 
@@ -60,16 +60,12 @@
             var nm = $input.attr('name') || '';
             if (!/\[\]$/.test(nm)) $input.attr('name', nm + '[]');
         }
+
         // UI
-
-        // 🔒 Safety : se Elementor ha clonato il form su mobile e c'è
-        // già una o più .cc-dz dopo l' input , le rimuoviamo per evitare duplicati .
-        $input.nextAll('.cc-dz').remove();
-
-        var $wrap  = $('<div class="cc-dz" tabindex="0" role="button" aria-label="Carica file"></div>');
-        var $hint  = $('<div class="cc-dz-hint">Trascina qui i file o clicca per selezionare</div>');
-        var $list  = $('<div class="cc-dz-list" aria-live="polite"></div>');
-        var $err   = $('<div class="cc-dz-err" style="display:none"></div>');
+        var $wrap = $('<div class="cc-dz" tabindex="0" role="button" aria-label="Carica file"></div>');
+        var $hint = $('<div class="cc-dz-hint">Trascina qui i file o clicca per selezionare</div>');
+        var $list = $('<div class="cc-dz-list" aria-live="polite"></div>');
+        var $err = $('<div class="cc-dz-err" style="display:none"></div>');
         var $badge = $('<div class="cc-dz-debug"' + (DEBUG ? '' : ' style="display:none"') + '></div>');
 
         $input.addClass('cc-hidden').after($wrap);
